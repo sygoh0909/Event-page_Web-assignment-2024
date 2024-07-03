@@ -1,0 +1,75 @@
+body {
+    background-color:#f4ffe4;
+    color: #333333;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/91758/trilliumgradient.png);
+}
+
+nav a {
+    display: block;
+    color: #FFFFFF; /*Text color for navifation link */
+    text-decoration: none; /* Remove default underline */
+    padding-bottom: auto; /* Add padding for better spacing */
+}
+
+nav a:hover {
+    background-color: #a3be8c; /* Change background color on hover */
+}
+
+#wrapper {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #A9A9A9;
+}
+
+.companyname {
+    font-weight: bold;
+    color: #5c743d;
+}
+
+img {
+    border-style: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#nav-cell {
+    width: 100px;
+    background-color: #5c743d;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#content-cell {
+    background-color: #FFFFFF;
+    padding: 15px;
+}
+
+#header-cell {
+    background-color: #d5edb3;
+    color: #5c743d;
+    height: 86px;
+    text-align: center;
+}
+
+#title-cell {
+    background-color: #d5edb3;
+    color: #5c743d;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/91758/trilliumbg.png);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+#text-cell {
+    padding-right: 15px;
+}
+
+#footer-cell {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/91758/trilliumfoot.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 100px;
+}

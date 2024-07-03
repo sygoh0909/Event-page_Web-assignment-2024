@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Flexbox Example </title>
+    <style>
+
+        h1 { background-color: purple;
+            color: white;
+            text-align: center;
+        }
+
+        .flex-container {
+            display:flex;
+            width: 1000px;
+            flex-wrap: wrap; 
+            border: 2px solid rgba(60,60,60,0.1);
+            background-color: rgba(255,165,0,0.1);
+            padding: 20px;
+            height: 500px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .flex-item {
+            background-color: #e84d51;
+            margin: 10px;
+            padding: 20px;
+            width: 100px;
+            height: 100px;
+            flex:1;
+        }
+
+        .flex-item:nth-child(2){
+            background-color: #7ed636;
+            height: 150px;
+        }
+
+        .flex-item:nth-child(3){
+            background-color: #2f97ff;
+            height: 200px;
+        }
+
+        .flex-item:nth-child(4){
+            background-color: #ffb32f;
+            height:250px;
+        }
+
+        .flex-item:nth-child(5){
+            background-color: #8f5bd4;
+            height: 300px;
+        }
+
+        /* Adjustment arangement of specific items */
+        .flex-item:nth-child(1){
+            align-self:flex-start;
+        }
+
+        .flex-item:nth-child(3){
+            align-self:flex-end;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> My Flexbox Container with Fixed Sizes </h1>
+    <div class="flex-container">
+
+        <div class="flex-item"> Item A </div>
+        <div class="flex-item"> Item B </div>
+        <div class="flex-item"> Item C </div>
+        <div class="flex-item"> Item D </div>
+        <div class="flex-item"> Item E </div>
+        
+    </div>
+</body>
+</html>

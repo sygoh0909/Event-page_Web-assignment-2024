@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+    <p onmouseover = "appendToFile()">Hover here to trigger next line></p>
+    <script>
+        function appendToFile(){
+            let div = document.createElement('div');
+            div.className = "alert";
+            div.innerHTML = "You've added a new line.";
+            document.body.append(div);
+        }
+    </script>
+</body>
+</html>

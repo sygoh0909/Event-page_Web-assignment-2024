@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Flexbox Example </title>
+    <style>
+
+        h1 { background-color: purple;
+            color: white;
+        }
+
+        .flex-container {
+            display:flex;
+            border: 2px solid rgba(60,60,60,0.1);
+            background-color: rgba(255,165,0,0.1);
+            padding: 10px;
+        }
+
+        .flex-item {
+            background-color: #e84d51;
+            margin: 10px;
+            padding: 20px;
+            flex:1;
+        }
+
+        .flex-item:nth-child(2){
+            background-color: #7ed636;
+        }
+
+        .flex-item:nth-child(3){
+            background-color: #2f97ff;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> My Flexbox Container </h1>
+    <div class="flex-container">
+        <div class="flex-item">
+            2nd div<br> Flex item 1
+        </div>
+        <div class="flex-item">
+            3rd div<br>Flex item 2
+        </div>
+        <div class="flex-item">
+            4th div<br>Flex item 3
+        </div>
+    </div>
+</body>
+</html>
