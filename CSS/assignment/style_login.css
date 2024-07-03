@@ -2,19 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; /* Center the container vertically and horizontally */
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-    background-image: url('background.jpg')
+    background-image:url('background.jpg')
 }
 
 .container {
-    background-color: #fff;
+    background-color: #fff; /* White background for the form container */
     padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center;
 }
 
@@ -36,11 +36,11 @@ h1 {
 }
 
 .toggle-buttons button:hover {
-    background-color: #555;
+    background-color: #555; /* Darker background on hover */
 }
 
 form {
-    display: none;
+    display: none; /* Hide forms by default */
 }
 
 form h2 {
@@ -72,5 +72,5 @@ form button:hover {
 }
 
 #loginForm {
-    display: block;
+    display: block; /* Show the login form by default */
 }
