@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    text-align: right;
+    background-color: #444;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+.timeline {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.timeline h2 {
+    text-align: center;
+}
+
+.scroll-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 20px; /* To prevent text cut-off by scrollbar */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.event {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.main-event {
+    background-color: #e1f5fe;
+    border-color: #81d4fa;
+}
+
+.event a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.event a:hover {
+    text-decoration: underline;
+}
+
+.subpages-info {
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.subpages-info h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subpage {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.subpage h3 {
+    margin-top: 0;
+}
+
+.subpage a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.subpage a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
