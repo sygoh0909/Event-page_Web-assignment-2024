@@ -41,6 +41,10 @@ main {
     padding: 20px;
 }
 
+.main-event{
+    background-color: #ddd;
+}
+
 .timeline {
     margin: 20px auto;
     max-width: 800px;
@@ -65,11 +69,6 @@ main {
     border-radius: 4px;
     margin: 10px 0;
     padding: 10px;
-}
-
-.main-event {
-    background-color: #e1f5fe;
-    border-color: #81d4fa;
 }
 
 .event a {

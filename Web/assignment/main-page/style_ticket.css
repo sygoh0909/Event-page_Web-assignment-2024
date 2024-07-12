@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #6a0dad; /* Purple color for headings */
+    text-align: center;
+}
+
+.ticket-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.ticket-info th, .ticket-info td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.ticket-info th {
+    background-color: #6a0dad; /* Purple color for table header */
+    color: white;
+}
+
+.seating-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.seating-chart {
+    display: inline-block;
+    border: 2px solid #ddd;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seat.available {
+    background-color: #6a0dad; /* Purple color for available seats */
+    color: white;
+}
+
+.seat.booked {
+    background-color: #ddd; /* Grey color for booked seats */
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #4b0082; /* Darker purple color for selected seats */
+}
+
+.seat.vip {
+    background-color: #ff69b4; /* Pink color for VIP seats */
+}
+
+
+.ticket-selection {
+    text-align: center;
+}
+
+.ticket-selection form {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #6a0dad; /* Purple color for border */
+    display: inline-block;
+}
+
+.ticket-selection button {
+    background-color: #6a0dad; /* Purple color for button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.ticket-selection button:hover {
+    background-color: #5a0cb0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

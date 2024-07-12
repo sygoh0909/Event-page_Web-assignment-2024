@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Purchase</title>
+    <link rel="stylesheet" href="style_ticket.css">
+</head>
+<body>
+    <main>
+        <h2>Ticket Purchase</h2>
+        <section class="ticket-info">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>General Admission</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>VIP</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Backstage Pass</td>
+                        <td>$200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="seating-info">
+            <h3>Seating Arrangement</h3>
+            <div class="seating-chart">
+                <div class="row">
+                    <div class="seat available general" data-price="50">A1</div>
+                    <div class="seat booked">A2</div>
+                    <div class="seat available general" data-price="50">A3</div>
+                    <div class="seat available general" data-price="50">A4</div>
+                    <div class="seat booked">A5</div>
+                    <!-- Add more seats here -->
+                </div>
+                <div class="row">
+                    <div class="seat vip" data-price="100">B1</div>
+                    <div class="seat vip" data-price="100">B2</div>
+                    <div class="seat booked">B3</div>
+                    <div class="seat vip" data-price="100">B4</div>
+                    <div class="seat vip" data-price="100">B5</div>
+                    <!-- Add more seats here -->
+                </div>
+                <!-- Add more rows as needed -->
+            </div>
+        </section>
+        <section class="ticket-selection">
+            <h3>Select Your Tickets</h3>
+            <form id="ticket-form">
+                <label for="selected-seats">Selected Seats:</label>
+                <div id="selected-seats"></div>
+
+                <br><br>
+
+                <label for="total-price">Total Price:</label>
+                <span id="total-price">$0</span>
+
+                <br><br>
+
+                <h3>Payment Method</h3>
+                <label for="payment-method">Choose a payment method:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                </select>
+
+                <br><br>
+
+                <button type="submit">Purchase Tickets</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Event Name. All rights reserved.</p>
+    </footer>
+
+    <script src="ticket_purchase.js"></script>
+</body>
+</html>
