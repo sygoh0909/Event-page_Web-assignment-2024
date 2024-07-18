@@ -9,13 +9,20 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="main-event-details.html">Main Event Details</a></li>
-                <li><a href="merchandise.html">Merchandise</a></li>
-                <li><a href="ticket-purchase.html">Ticket Purchase</a></li>
-                <li><a href="mini-events.html">Mini Events</a></li>
-                <li><a href="event-volunteer.html">Event Volunteer</a></li>
-            </ul>
+            <div class="left-links">
+                <ul>
+                    <li><a href="main-event-details.html">Main Event Details</a></li>
+                    <li><a href="merchandise.html">Merchandise</a></li>
+                    <li><a href="ticket-purchase.html">Ticket Purchase</a></li>
+                    <li><a href="mini-events.html">Mini Events</a></li>
+                    <li><a href="event-volunteer.html">Event Volunteer</a></li>
+                </ul>
+            </div>
+            <div class="right-links">
+                <ul>
+                    <li><a href="login.html">Login  | Sign Up</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="banner">
             <h1>Event Name</h1>
@@ -23,10 +30,18 @@
     </header>
     <main>
         <section class="main-event">
-            <h2>Main event details</h2>
-            <p>blablabla</p>
-            <a href="main-event-details.html">Check out more</a>
-        </section>
+            <h2>Welcome to Our World!</h2>
+            <div class="event-details">
+                <img src="event-image.jpg" alt="Event Image" class="event-image">
+                <div class="details">
+                    <p>Details about the main event go here.</p>
+                    <p>Venue: Sunway Lagoon</p>
+                    <p>Time: 6:30 PM - 10:30 PM</p>
+                    <p>Join our concert and experience an unforgettable night of music and fun!</p>
+                    <a href="main-event-details.html">Check out more</a>
+                </div>
+            </div>
+        </section>        
         <section class="timeline">
             <h2>Event Timeline</h2>
             <div class="scroll-container">
@@ -76,7 +91,18 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Event Name. All rights reserved.</p>
+        <div class="footer-top">
+            <p>Follow us on social media:</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com">Facebook</a>
+                <a href="https://www.twitter.com">Twitter</a>
+                <a href="https://www.instagram.com">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><b>TicketAmateur</b></p>
+            <p>&copy; 2024 UniStudents Inc. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

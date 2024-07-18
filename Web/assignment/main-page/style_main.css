@@ -2,25 +2,43 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-image: url(galaxy\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     position: relative;
-    background-color: #2c3e50;
     color: #fff;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+nav .left-links,
+nav .right-links {
+    display: flex;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 10px;
-    text-align: right;
-    background-color: #2c3e50;
+    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin-left: 20px;
 }
 
@@ -32,17 +50,57 @@ nav ul li a {
 .banner {
     text-align: center;
     padding: 70px 0;
-    background-color: #333;
-    background-image: url(banner.jpg);
+    background-image: url(banner1.png);
+    background-position: center;
     color: #fff;
 }
 
 main {
     padding: 20px;
+    flex: 1;
 }
 
-.main-event{
-    background-color: #ddd;
+.main-event {
+    background-color: #28366E;
+    color: #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px; /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.event-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.details {
+    text-align: left;
+}
+
+.details p {
+    margin-bottom: 10px;
+}
+
+.details a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.details a:hover {
+    text-decoration: underline;
 }
 
 .timeline {
@@ -65,6 +123,7 @@ main {
 
 .event {
     background-color: #f9f9f9;
+    color: #000;
     border: 1px solid #ddd;
     border-radius: 4px;
     margin: 10px 0;
@@ -94,6 +153,7 @@ main {
 
 .subpage {
     background-color: #f0f0f0;
+    color: #000;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin: 10px 0;
@@ -114,8 +174,37 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    width: 100%;
     text-align: center;
+}
+
+.footer-top {
     padding: 10px 0;
+    background-color: #5DADE2; /* Light blue */
+    color: #fff;
+}
+
+.footer-bottom {
+    padding: 10px 0;
+    background-color: #D5DBDB; /* Light grey */
+    color: #333;
+}
+
+.footer-top p,
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-top .social-media {
+    margin-top: 10px;
+}
+
+.footer-top .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-top .social-media a:hover {
+    text-decoration: underline;
 }

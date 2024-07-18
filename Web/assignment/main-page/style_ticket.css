@@ -2,8 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #0C1A50; /* Darker blue background fallback */
+    background-image: url(galaxy\ \(20\).jpg); /* Galaxy background image */
+    background-size: cover;
+    color: #fff; /* White text */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,7 +17,7 @@ main {
 }
 
 h2, h3 {
-    color: #6a0dad; /* Purple color for headings */
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
     text-align: center;
 }
 
@@ -26,13 +28,13 @@ h2, h3 {
 }
 
 .ticket-info th, .ticket-info td {
-    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
     padding: 8px;
     text-align: left;
 }
 
 .ticket-info th {
-    background-color: #6a0dad; /* Purple color for table header */
+    background-color: #6a1b9a; /* Dark purple color for table header */
     color: white;
 }
 
@@ -43,7 +45,7 @@ h2, h3 {
 
 .seating-chart {
     display: inline-block;
-    border: 2px solid #ddd;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
     padding: 10px;
 }
 
@@ -53,11 +55,24 @@ h2, h3 {
     margin: 10px 0;
 }
 
+.stage {
+    width: 60px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    background-color: #9c27b0; /* Darker purple color for stage */
+    color: #fff; /* Text color for stage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 auto; /* Center the stage horizontally */
+    margin-bottom: 5px; /* Add bottom margin for spacing */
+}
+
 .seat {
     width: 40px;
     height: 40px;
-    background-color: #eee;
-    border: 1px solid #ddd;
+    background-color: #9575cd; /* Light purple for available seats */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
     margin: 5px;
     text-align: center;
     line-height: 40px;
@@ -66,7 +81,7 @@ h2, h3 {
 }
 
 .seat.available {
-    background-color: #6a0dad; /* Purple color for available seats */
+    background-color: #6a1b9a; /* Dark purple color for available seats */
     color: white;
 }
 
@@ -76,28 +91,30 @@ h2, h3 {
 }
 
 .seat.selected {
-    background-color: #4b0082; /* Darker purple color for selected seats */
+    background-color: #4527a0; /* Darker purple color for selected seats */
+    color: #000; /* Black text for selected seats */
 }
 
 .seat.vip {
-    background-color: #ff69b4; /* Pink color for VIP seats */
+    background-color: #ad1457; /* Dark pink color for VIP seats */
 }
-
 
 .ticket-selection {
     text-align: center;
 }
 
 .ticket-selection form {
-    background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #6a0dad; /* Purple color for border */
+    border-left: 5px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
+    border-top: 2px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
+    border-right: 2px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
     display: inline-block;
 }
 
 .ticket-selection button {
-    background-color: #6a0dad; /* Purple color for button */
+    background-color: #7b1fa2; /* Darker purple color for button to fit galaxy theme */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -105,13 +122,13 @@ h2, h3 {
 }
 
 .ticket-selection button:hover {
-    background-color: #5a0cb0;
+    background-color: #512da8; /* Darker purple on hover */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background: #333;
+    padding: 5px; /* Adjust padding as needed */
+    background: rgba(81, 45, 168, 0.8); /* Semi-transparent dark purple background for footer */
     color: #fff;
     position: relative;
     width: 100%;
