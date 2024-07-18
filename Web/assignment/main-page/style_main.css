@@ -104,41 +104,66 @@ main {
 }
 
 .timeline {
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.timeline h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .scroll-container {
-    max-height: 400px;
-    overflow-y: auto;
-    padding-right: 20px; /* To prevent text cut-off by scrollbar */
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between items */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snapping to each image */
+    padding: 10px 0;
+    animation: scrollAnimation 30s linear infinite alternate;
 }
 
 .event {
-    background-color: #f9f9f9;
-    color: #000;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin: 10px 0;
-    padding: 10px;
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust spacing between events */
+    scroll-snap-align: center; /* Center each event */
+}
+
+.event-image {
+    width: 200px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.event-details {
+    text-align: left;
+}
+
+.event h3 {
+    margin-top: 10px; /* Move heading below image */
+    margin-bottom: 5px;
+}
+
+.event p {
+    margin-bottom: 10px;
 }
 
 .event a {
-    display: block;
-    margin-top: 10px;
+    display: inline-block;
     color: #007bff;
     text-decoration: none;
 }
 
 .event a:hover {
     text-decoration: underline;
+}
+
+/* Animation for continuous alternate scroll */
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(3%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .subpages-info {
