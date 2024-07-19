@@ -70,6 +70,7 @@ main {
     max-width: 800px; /* Adjust as needed */
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
 }
 
 .event-details {

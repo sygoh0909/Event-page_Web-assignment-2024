@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0C1A50; /* Darker blue background fallback */
-    background-image: url(galaxy\ \(20\).jpg); /* Galaxy background image */
+    background-image: url(galaxy.jpg); /* Galaxy background image */
     background-size: cover;
     color: #fff; /* White text */
     display: flex;
@@ -56,9 +56,9 @@ h2, h3 {
 }
 
 .stage {
-    width: 60px; /* Adjust width as needed */
-    height: 40px; /* Adjust height as needed */
-    background-color: #9c27b0; /* Darker purple color for stage */
+    width: 200px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    background-color: #662d91;
     color: #fff; /* Text color for stage */
     display: flex;
     justify-content: center;
@@ -68,21 +68,41 @@ h2, h3 {
     margin-bottom: 5px; /* Add bottom margin for spacing */
 }
 
+/* Seat styles */
 .seat {
-    width: 40px;
-    height: 40px;
+    position: relative;
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
     background-color: #9575cd; /* Light purple for available seats */
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    border-radius: 50%; /* Make the seat circular */
     margin: 5px;
     text-align: center;
-    line-height: 40px;
+    line-height: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 10px; /* Smaller font size */
+    color: #fff; /* White text */
 }
 
-.seat.available {
-    background-color: #6a1b9a; /* Dark purple color for available seats */
-    color: white;
+.seat::before, .seat::after {
+    content: '';
+    position: absolute;
+    background-color: inherit; /* Same color as the seat */
+    border-radius: 50%;
+}
+
+.seat::before {
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    left: 5px;
+}
+
+.seat::after {
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    right: 5px;
 }
 
 .seat.booked {
