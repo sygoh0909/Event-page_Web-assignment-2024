@@ -1,8 +1,9 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(galaxy\ \(1\).jpg);
+    background-image: url('galaxy (1).jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,9 +14,8 @@ body {
 }
 
 header {
-    position: relative;
-    color: #fff;
     width: 100%;
+    color: #fff;
 }
 
 nav {
@@ -23,7 +23,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-
 }
 
 nav .left-links,
@@ -50,7 +49,7 @@ nav ul li a {
 .banner {
     text-align: center;
     padding: 70px 0;
-    background-image: url(banner1.png);
+    background-image: url('banner1.png');
     background-position: center;
     color: #fff;
 }
@@ -67,16 +66,17 @@ main {
     border-radius: 4px;
     margin-bottom: 20px;
     text-align: center;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .event-details {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
 
 .event-image {
@@ -111,22 +111,22 @@ main {
 
 .scroll-container {
     display: flex;
-    justify-content: space-around; /* Adjust spacing between items */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Enable snapping to each image */
+    justify-content: space-around;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     padding: 10px 0;
     animation: scrollAnimation 30s linear infinite alternate;
 }
 
 .event {
     flex: 0 0 auto;
-    margin-right: 20px; /* Adjust spacing between events */
-    scroll-snap-align: center; /* Center each event */
+    margin-right: 20px;
+    scroll-snap-align: center;
 }
 
 .event-image {
-    width: 200px; /* Adjust image width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 200px;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -136,7 +136,7 @@ main {
 }
 
 .event h3 {
-    margin-top: 10px; /* Move heading below image */
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 
@@ -199,38 +199,113 @@ main {
     text-decoration: underline;
 }
 
+/* General footer styles */
 footer {
     width: 100%;
     text-align: center;
 }
 
+/* Footer top section */
 .footer-top {
-    padding: 10px 0;
-    background-color: #5DADE2; /* Light blue */
+    padding: 10px;
+    background-color: #5DADE2; /* Light blue background */
     color: #fff;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 15px; /* Space between text and social media items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-.footer-bottom {
-    padding: 10px 0;
-    background-color: #D5DBDB; /* Light grey */
-    color: #333;
-}
-
-.footer-top p,
-.footer-bottom p {
+/* Footer top text styles */
+.footer-top p {
     margin: 0;
+    font-size: 16px;
 }
 
-.footer-top .social-media {
-    margin-top: 10px;
+/* Social media styles */
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between social media items */
 }
 
-.footer-top .social-media a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+.social-media-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    font-size: 16px;
 }
 
-.footer-top .social-media a:hover {
-    text-decoration: underline;
+.social-media-item i {
+    font-size: 20px; /* Adjust icon size */
+}
+
+.social-media-item span {
+    font-size: 14px; /* Adjust text size */
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    padding: 5px 0; /* Reduced padding to make footer shorter */
+    background-color: #D5DBDB;
+    color: #333;
+    font-size: 15px; /* Adjust font size if needed */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    .main-event {
+        padding: 15px;
+    }
+
+    .event-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .event-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .scroll-container {
+        flex-direction: column;
+        animation: none; /* Disable animation on smaller screens */
+    }
+
+    .event {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .subpages-info {
+        margin: 20px auto;
+    }
+
+    .subpage {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin-left: 5px;
+    }
+
+    .banner {
+        padding: 50px 0;
+    }
+
+    .main-event {
+        max-width: 100%;
+    }
+
+    .event-image {
+        width: 100%;
+    }
 }
