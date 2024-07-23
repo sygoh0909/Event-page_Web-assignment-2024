@@ -1,0 +1,69 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in total width and height */
+    font-family: Arial, sans-serif; /* Default font for the page */
+}
+
+/* Band Members Section */
+.band-members {
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    margin: 0;
+}
+
+/* Individual Band Member */
+.band-member {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Band Member Info */
+.band-member-info {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Band Member Images Container */
+.band-member-images {
+    flex: 2;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 300px; /* Set a fixed height for portrait images */
+}
+
+/* Band Member Images */
+.band-member-images img {
+    width: auto; /* Allow width to adjust automatically */
+    height: 100%; /* Fill the container height */
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+/* Active Image */
+.band-member-images img.active {
+    opacity: 1;
+}
+
+/* Image Animation */
+.band-member-images img:nth-child(1) {
+    animation: slide 15s infinite;
+}
+
+/* Image Slide Keyframes */
+@keyframes slide {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    40% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+}

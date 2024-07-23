@@ -3,10 +3,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('galaxy (1).jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: #fff;
     min-height: 100vh;
     display: flex;
