@@ -1,51 +1,101 @@
+/* General Styles - style_general.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
+/* Merchandise Page Styles - style_merchandise.css */
 main {
     padding: 20px;
+    background-color: #fff;
 }
 
-h2 {
-    color: #6a0dad; /* Purple color for headings */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.merchandise-item {
+/* Container for merchandise items */
+.merchandise-container {
     display: flex;
-    align-items: center;
-    background: #fff;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Heading styles */
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #6a0dad; /* Purple color for border */
+    text-align: center;
+}
+
+/* Individual merchandise item styles */
+.merchandise-item {
+    flex: 1 1 calc(25% - 20px); /* Adjust size to fit 4 items per row, with gaps */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; /* Align text to the left */
 }
 
 .merchandise-item img {
-    max-width: 150px;
-    margin-right: 20px;
+    max-width: 150px; /* Set a fixed size for images */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Space between image and text */
 }
 
 .item-details {
-    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack text details vertically */
 }
 
 .item-details h3 {
-    margin-top: 0;
-    color: #6a0dad; /* Purple color for item titles */
+    font-family: 'Georgia', serif;
+    color: #333;
+    margin: 0 0 10px;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
+.item-details p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.item-details button {
+    background-color: #f39c12;
     color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.item-details button:hover {
+    background-color: #e67e22;
+}
+
+@media (max-width: 768px) {
+    .merchandise-item {
+        flex: 1 1 calc(50% - 20px); /* Adjust size for smaller screens, 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .merchandise-item {
+        flex: 1 1 100%; /* Stack items vertically on very small screens */
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center align text on small screens */
+    }
+
+    .merchandise-item img {
+        margin-right: 0; /* Remove margin on small screens */
+        margin-bottom: 10px; /* Space between image and text */
+    }
 }
