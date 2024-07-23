@@ -121,15 +121,22 @@ nav ul li a:focus {
     display: flex; /* Center content vertically and horizontally */
     align-items: center;
     justify-content: center;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    background-color: rgba(12, 26, 80, 0.8); /* Initial color to blend with body bg color */
+}
+
+/* Body background color */
+body {
+    background-image: url(gradient.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .banner h1 {
     font-size: 3em; /* Adjust font size as needed */
     margin: 0;
-}
-
-body{
-    background-color: #0C1A50;
 }
 
 /* Global reset to avoid default margin/padding affecting layout */

@@ -141,39 +141,3 @@ h2, h3 {
 .ticket-selection button:hover {
     background-color: #512da8; /* Darker purple on hover */
 }
-
-footer {
-    width: 100%;
-    text-align: center;
-}
-
-.footer-top {
-    padding: 10px 0;
-    background-color: #5DADE2; /* Light blue */
-    color: #fff;
-}
-
-.footer-bottom {
-    padding: 10px 0;
-    background-color: #D5DBDB; /* Light grey */
-    color: #333;
-}
-
-.footer-top p,
-.footer-bottom p {
-    margin: 0;
-}
-
-.footer-top .social-media {
-    margin-top: 10px;
-}
-
-.footer-top .social-media a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-top .social-media a:hover {
-    text-decoration: underline;
-}
