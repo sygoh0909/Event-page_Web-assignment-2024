@@ -1,64 +1,50 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('loginForm');
-    const signUpForm = document.getElementById('signUpForm');
+document.addEventListener('DOMContentLoaded', () => {
     const loginToggle = document.getElementById('loginToggle');
     const signUpToggle = document.getElementById('signUpToggle');
+    const loginForm = document.getElementById('loginForm');
+    const signUpForm = document.getElementById('signUpForm');
+    const formContainer = document.getElementById('formContainer');
 
-    // Show login form by default
-    loginForm.style.display = 'block';
-    signUpForm.style.display = 'none';
-
-    // Toggle between Login and Sign Up forms
-    loginToggle.addEventListener('click', function() {
+    loginToggle.addEventListener('click', () => {
         loginForm.style.display = 'block';
         signUpForm.style.display = 'none';
     });
 
-    signUpToggle.addEventListener('click', function() {
-        signUpForm.style.display = 'block';
+    signUpToggle.addEventListener('click', () => {
         loginForm.style.display = 'none';
+        signUpForm.style.display = 'block';
     });
 
-    // Login form submission
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // Perform login logic here (e.g., validate credentials)
-        const userId = loginForm.elements['userId'].value;
-        const password = loginForm.elements['password'].value;
+    // Handle form submissions
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-        // Example: Validate user credentials (you can replace this with your authentication logic)
-        if (userId === 'testuser' && password === 'testpassword') { //need to get user id and password 
-            // Successful login
-            alert('Login successful!');
-            // Redirect to main page (replace 'main-event.html' with your actual main page)
-            window.location.href = 'main.html';
+        // Simulate login
+        const userId = document.getElementById('loginUserId').value;
+        const password = document.getElementById('loginPassword').value;
+
+        // Normally you would check the credentials with a server
+        if (userId && password) {
+            // Redirect to main page or dashboard
+            window.location.href = 'main.html'; // Replace with your actual main page URL
         } else {
-            // Failed login
-            alert('Invalid credentials. Please try again.');
-            // Optionally, clear the form fields
-            loginForm.reset();
+            alert('Please enter both user ID and password');
         }
     });
 
-    // Sign Up form submission
-    signUpForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // Perform sign-up logic here (e.g., register new user)
-        const newUser = {
-            userId: signUpForm.elements['userId'].value,
-            password: signUpForm.elements['password'].value
-            // Add additional fields as needed
-        };
+    signUpForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-        // Example: Register user (you can replace this with your registration logic)
-        console.log('New user:', newUser);
-        alert('Sign Up successful! Please proceed to login.');
-        // Clear the sign-up form fields
-        signUpForm.reset();
-        // Switch to login form after sign-up
-        loginForm.style.display = 'block';
-        signUpForm.style.display = 'none';
+        // Simulate sign-up
+        const userId = document.getElementById('signUpUserId').value;
+        const password = document.getElementById('signUpPassword').value;
+
+        // Normally you would send this data to a server
+        if (userId && password) {
+            alert('Sign up successful! You can now log in.');
+            loginToggle.click(); // Switch to login form after successful sign up
+        } else {
+            alert('Please enter both user ID and password');
+        }
     });
 });
