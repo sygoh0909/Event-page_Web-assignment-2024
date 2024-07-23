@@ -132,6 +132,13 @@ body{
     background-color: #0C1A50;
 }
 
+/* Global reset to avoid default margin/padding affecting layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 /* Footer styles */
 footer {
     width: 100%;

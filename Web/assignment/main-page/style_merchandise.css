@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #ddd;
 }
 
 /* Merchandise Page Styles - style_merchandise.css */
@@ -26,6 +27,30 @@ h2 {
     color: #333;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.cart-icon-inline {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.cart-icon-inline a {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon-inline i {
+    margin-right: 5px;
+}
+
+#cart-count {
+    background-color: #f39c12;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
 }
 
 /* Individual merchandise item styles */

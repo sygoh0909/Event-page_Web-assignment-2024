@@ -1,30 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to handle 'Add to Cart' button clicks
     const handleAddToCart = (event) => {
         const button = event.target;
-        const itemDetails = button.parentElement;
-        const itemName = itemDetails.querySelector('h3').textContent;
-        const itemPrice = itemDetails.querySelector('p').textContent;
-        
-        // Create a cart item
-        const cartItem = {
-            name: itemName,
-            price: itemPrice
-        };
+        const itemElement = button.closest('.merchandise-item');
+        const name = itemElement.querySelector('h3').textContent;
+        const price = parseFloat(itemElement.querySelector('p').textContent.replace('Price: $', ''));
+        const image = itemElement.querySelector('img').src;
 
-        // Check if cart exists in localStorage
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push(cartItem);
-        
-        // Save cart to localStorage
-        localStorage.setItem('cart', JSON.stringify(cart));
-        
-        // Notify user
-        alert(`${itemName} has been added to your cart!`);
+        addToCart(name, price, image);
+        alert(`${name} has been added to your cart!`);
     };
 
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cart.find(item => item.name === name);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({ name, price, image, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+    }
+
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartCount = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+        document.getElementById('cart-count').textContent = cartCount;
+    }
+
     // Add event listeners to all 'Add to Cart' buttons
-    document.querySelectorAll('.item-details button').forEach(button => {
+    document.querySelectorAll('.merchandise-item button').forEach(button => {
         button.addEventListener('click', handleAddToCart);
     });
+
+    // Initial cart count update
+    updateCartCount();
 });
