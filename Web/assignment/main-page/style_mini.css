@@ -1,22 +1,26 @@
-/* Mini Events Page Styles - style_mini.css */
 main {
     padding: 20px;
+    color: #fff;
 }
 
 /* Mini event section styles */
 .mini-event {
     margin-bottom: 40px;
+    background-color: #003366; /* Darker blue background */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .mini-event h2 {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .mini-event p {
     font-size: 16px;
-    color: #666;
+    color: #ddd;
     margin: 5px 0;
 }
 
@@ -30,7 +34,7 @@ main {
 
 /* Accordion styles */
 .accordion {
-    background-color: #f39c12;
+    background-color: #9c27b0; /* Purple background */
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -40,10 +44,11 @@ main {
     width: 100%;
     text-align: left;
     margin-bottom: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .accordion:hover {
-    background-color: #e67e22;
+    background-color: #7b1fa2; /* Darker purple on hover */
 }
 
 .accordion-content {
@@ -51,14 +56,19 @@ main {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #00274d; /* Dark blue background */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #fff;
 }
 
+/* Busking Event Styles */
 .busking-event {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for the event section */
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .busking-event img {
@@ -70,6 +80,36 @@ main {
 
 .busking-event p {
     margin: 0;
+    color: #ddd;
+}
+
+/* Video Section */
+.video-section {
+    margin-top: 20px;
+}
+
+.video-section h3 {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    margin-bottom: 20px;
+}
+
+.video-wrapper video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-wrapper p {
+    color: #ddd;
+    font-size: 16px;
+    margin-top: 5px;
 }
 
 /* Pop-Up Store Section */
@@ -77,19 +117,20 @@ main {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #003366; /* Darker blue background */
+    color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #popup-store h2 {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 #popup-store p {
     font-size: 16px;
-    color: #666;
+    color: #ddd;
     margin: 5px 0;
 }
 
@@ -102,19 +143,20 @@ main {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #003366; /* Darker blue background */
+    color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .mini-event-info h2 {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 .mini-event-info p {
     font-size: 16px;
-    color: #666;
+    color: #ddd;
     margin: 5px 0;
 }
 
@@ -126,4 +168,3 @@ main {
 .mini-event-info a:hover {
     text-decoration: underline;
 }
-

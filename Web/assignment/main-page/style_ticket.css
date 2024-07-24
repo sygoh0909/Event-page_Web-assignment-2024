@@ -53,19 +53,24 @@ h2, h3 {
 }
 
 .stage {
-    width: 200px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    background-color: #662d91;
-    color: #fff; /* Text color for stage */
+    width: 220px; /* Slightly increased width for better visual balance */
+    height: 120px; /* Slightly increased height for better visual balance */
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa); /* Gradient background for a more dynamic look */
+    color: #fff; /* White text color */
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    border-radius: 10px; /* Rounded corners for a softer appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for a lifted effect */
     margin: 0 auto; /* Center the stage horizontally */
-    margin-bottom: 5px; /* Add bottom margin for spacing */
+    margin-bottom: 10px; /* Increased bottom margin for better spacing */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    font-size: 1.2em; /* Slightly larger text for better readability */
 }
 
-/* Seat styles */
+
+/* General seat styles */
 .seat {
     position: relative;
     width: 30px; /* Adjust width as needed */
@@ -102,6 +107,7 @@ h2, h3 {
     right: 5px;
 }
 
+/* Seat states */
 .seat.booked {
     background-color: #ddd; /* Grey color for booked seats */
     cursor: not-allowed;
@@ -112,10 +118,17 @@ h2, h3 {
     color: #000; /* Black text for selected seats */
 }
 
+/* VIP seat styles */
 .seat.vip {
     background-color: #ad1457; /* Dark pink color for VIP seats */
 }
 
+/* VIP seat booked state */
+.seat.vip.booked {
+    background-color: #ddd; /* Grey color for booked VIP seats */
+}
+
+/* Ticket selection form styling */
 .ticket-selection {
     text-align: center;
 }

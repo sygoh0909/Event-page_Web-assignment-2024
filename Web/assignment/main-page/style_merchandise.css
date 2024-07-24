@@ -4,13 +4,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ddd;
+    color: #fff; /* Set default text color to white for better contrast */
 }
 
 /* Merchandise Page Styles - style_merchandise.css */
 main {
     padding: 20px;
-    background-color: #fff;
+    background-color: #333; /* Dark background for main content */
+    color: #fff; /* White text for contrast */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 /* Container for merchandise items */
@@ -24,9 +27,11 @@ main {
 /* Heading styles */
 h2 {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #f39c12; /* Eye-catching color for heading */
     margin-bottom: 20px;
     text-align: center;
+    font-size: 2em; /* Larger font size for emphasis */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
 }
 
 .cart-icon-inline {
@@ -35,7 +40,7 @@ h2 {
 }
 
 .cart-icon-inline a {
-    color: #000;
+    color: #f39c12; /* Matching color for cart link */
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -46,7 +51,7 @@ h2 {
 }
 
 #cart-count {
-    background-color: #f39c12;
+    background-color: #e67e22;
     color: #fff;
     border-radius: 50%;
     padding: 2px 8px;
@@ -59,10 +64,10 @@ h2 {
     display: flex;
     align-items: center; /* Center content vertically */
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #444; /* Dark background for items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left; /* Align text to the left */
 }
@@ -77,17 +82,18 @@ h2 {
 .item-details {
     display: flex;
     flex-direction: column; /* Stack text details vertically */
+    flex: 1; /* Allow details to take up remaining space */
 }
 
 .item-details h3 {
     font-family: 'Georgia', serif;
-    color: #333;
+    color: #f39c12; /* Highlight item names */
     margin: 0 0 10px;
 }
 
 .item-details p {
     font-size: 16px;
-    color: #666;
+    color: #ccc; /* Light gray for secondary text */
     margin: 5px 0;
 }
 
@@ -104,6 +110,11 @@ h2 {
 
 .item-details button:hover {
     background-color: #e67e22;
+}
+
+.merchandise-item:hover {
+    transform: translateY(-5px); /* Lift up effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
 }
 
 @media (max-width: 768px) {
