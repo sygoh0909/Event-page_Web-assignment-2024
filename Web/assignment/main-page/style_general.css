@@ -108,7 +108,17 @@ nav ul li a:focus {
     display: block;
 }
 
-/* Banner styles */
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the banner */
 .banner {
     width: 100%;
     height: 100vh; /* Full viewport height */
@@ -124,6 +134,8 @@ nav ul li a:focus {
     justify-content: center;
     transition: background-color 0.5s ease; /* Smooth transition for background color */
     background-color: rgba(12, 26, 80, 0.8); /* Initial color to blend with body bg color */
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 3s forwards; /* Apply the fade-in animation */
 }
 
 /* Body background color */

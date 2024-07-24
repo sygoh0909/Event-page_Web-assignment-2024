@@ -1,39 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    function displayCartItems() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const cartItemsContainer = document.getElementById('cart-items');
-        cartItemsContainer.innerHTML = ''; // Clear existing items
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalElement = document.getElementById('cart-total');
+    const clearCartButton = document.getElementById('clear-cart');
+    const checkoutButton = document.getElementById('checkout');
 
-        if (cart.length === 0) {
-            cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
-            return;
-        }
+    function updateCart() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cartItemsContainer.innerHTML = '';
+        let total = 0;
 
         cart.forEach(item => {
             const itemElement = document.createElement('div');
             itemElement.classList.add('cart-item');
             itemElement.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" />
+                <img src="${item.image}" alt="${item.name}">
                 <div>
                     <h3>${item.name}</h3>
-                    <p>Price: $${item.price.toFixed(2)}</p>
+                    <p>Price: $${item.price}</p>
                     <p>Quantity: ${item.quantity}</p>
                 </div>
             `;
             cartItemsContainer.appendChild(itemElement);
+            total += item.price * item.quantity;
         });
 
-        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        document.getElementById('cart-total').textContent = `Total: $${total.toFixed(2)}`;
+        cartTotalElement.textContent = total.toFixed(2);
+    }
+
+    function clearCart() {
+        localStorage.removeItem('cart');
+        updateCart();
+        alert('Cart has been cleared!');
     }
 
     function checkout() {
-        alert('Proceeding to checkout...');
-        // Implement checkout functionality here
+        const paymentMethod = document.getElementById('payment-method').value;
+        alert(`Proceeding to checkout with ${paymentMethod}.`);
+        // Implement payment processing logic here
     }
 
-    displayCartItems();
+    clearCartButton.addEventListener('click', clearCart);
+    checkoutButton.addEventListener('click', checkout);
 
-    // Attach checkout function to the button
-    document.querySelector('button').addEventListener('click', checkout);
+    // Initial cart update
+    updateCart();
 });

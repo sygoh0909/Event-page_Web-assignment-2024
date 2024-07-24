@@ -38,3 +38,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial cart count update
     updateCartCount();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all merchandise items
+    const items = document.querySelectorAll('.merchandise-item');
+
+    items.forEach(item => {
+        const images = item.querySelectorAll('.image-slider img');
+        let currentImageIndex = 0;
+
+        // Show the first image
+        if (images.length > 0) {
+            images[currentImageIndex].classList.add('active');
+        }
+
+        // Change images every 3 seconds
+        setInterval(() => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active');
+        }, 3000);
+    });
+});
