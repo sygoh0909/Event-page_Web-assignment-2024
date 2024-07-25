@@ -129,6 +129,9 @@ nav ul li a:focus {
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
     display: flex; /* Center content vertically and horizontally */
     align-items: center;
     justify-content: center;

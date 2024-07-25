@@ -14,7 +14,7 @@ body {
     display: inline-block;
     padding: 15px 30px;
     color: #fff;
-    background-color: #000000;
+    background-color: #F28C28;
     text-decoration: none;
     border-radius: 25px; /* Rounded corners */
     font-size: 18px;
@@ -116,28 +116,39 @@ main {
     scroll-snap-align: center;
 }
 
+.event-wrapper {
+    text-align: center; /* Center the content */
+}
+
+.event-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .event-image {
     width: 200px;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.event-details {
-    text-align: left;
+    margin: 10px 0; /* Margin to separate the image from text */
 }
 
 .event h3 {
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin: 10px 0;
 }
 
-.event p {
+.event-details p {
+    margin: 10px 0; /* Ensure there's space between paragraphs */
+}
+
+.event-description {
     margin-bottom: 10px;
 }
 
 .event a {
-    display: inline-block;
+    display: block; /* Ensure the link is displayed on its own line */
+    margin: 10px 0; /* Add margin to separate from the description */
     color: #007bff;
     text-decoration: none;
 }
