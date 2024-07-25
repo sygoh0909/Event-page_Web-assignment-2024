@@ -5,18 +5,17 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: #f5f5f5; /* Light grey for better contrast */
-    background-color: #1a1a1a; /* Very dark background for the whole page */
 }
 
 /* Merchandise Page Styles - style_merchandise.css */
 main {
     padding: 40px; /* Increased padding for more space around content */
-    background-color: #2a2a2a; /* Slightly lighter dark background for main content */
+    background-color: rgba(26, 35, 126, 0.8); /* Dark blue background with 80% opacity */
     color: #f5f5f5; /* Light text color for contrast */
     border-radius: 10px; /* Rounded corners for a modern look */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
     max-width: 1200px; /* Limit the width */
-    margin: 20px auto; /* Center the content horizontally and separate from footer */
+    margin: 40px auto; /* Increased vertical margin to separate from banner and footer */
 }
 
 /* Container for merchandise items */
@@ -70,7 +69,7 @@ h2 {
     padding: 20px; /* Increased padding for better spacing */
     border: 1px solid #555;
     border-radius: 12px;
-    background-color: #333; /* Dark background for items */
+    background-color: rgba(126, 87, 194, 0.8); /* Light purple background with 80% opacity */
     color: #f5f5f5; /* Light text color */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -108,7 +107,7 @@ h2 {
 .item-details h3 {
     margin: 10px 0;
     font-size: 1.5em;
-    color: #6c5b9a; /* Color for item title */
+    color: #4a148c; /* Darker purple color for item title */
 }
 
 .item-details p {
@@ -117,7 +116,7 @@ h2 {
 }
 
 .item-details button {
-    background-color: #9c27b0; /* Matching color for button */
+    background-color: #4a148c; /* Darker purple color for button */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -128,7 +127,7 @@ h2 {
 }
 
 .item-details button:hover {
-    background-color: #8e44ad; /* Slightly darker purple on hover */
+    background-color: #3e0e72; /* Slightly darker purple on hover */
     transform: scale(1.05);
 }
 
