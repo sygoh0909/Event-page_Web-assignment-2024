@@ -254,14 +254,15 @@
                 const userId = document.getElementById('loginUserId').value;
                 const password = document.getElementById('loginPassword').value;
 
-                if (userId && password) {
-                    // Perform validation (for demo purposes)
-                    if ((validEmail(userId) || validPhoneNumber(userId) || userId.length > 3) && password.length > 3) {
-                        // Redirect to main page or dashboard
-                        window.location.href = 'main.html'; // Replace with the actual URL of the main event page
-                    } else {
-                        loginError.style.display = 'block';
-                    }
+                const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+                const user = storedUsers.find(user => user.userId === userId && user.password === password);
+
+                if (user) {
+                    // Redirect to main page or dashboard
+                    window.location.href = 'main.html';
+                } else {
+                    // Display error message
+                    loginError.style.display = 'block';
                 }
             });
 
@@ -271,14 +272,16 @@
                 const userId = document.getElementById('signUpUserId').value;
                 const password = document.getElementById('signUpPassword').value;
 
-                if (userId && password.length > 8) {
-                    if (validEmail(userId) || validPhoneNumber(userId) || userId.length > 3) {
-                        // Redirect to main page or dashboard
-                        window.location.href = 'main.html'; // Replace with the actual URL of the main event page
-                    } else {
-                        signUpError.style.display = 'block';
-                    }
+                if ((validEmail(userId) || validPhoneNumber(userId)) && password.length > 8) {
+                    const newUser = { userId, password };
+                    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+                    storedUsers.push(newUser);
+                    localStorage.setItem('users', JSON.stringify(storedUsers));
+
+                    // Redirect to main page or dashboard
+                    window.location.href = 'main.html';
                 } else {
+                    // Display error message
                     signUpError.style.display = 'block';
                 }
             });
