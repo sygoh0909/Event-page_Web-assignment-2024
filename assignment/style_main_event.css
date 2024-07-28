@@ -163,6 +163,14 @@ section {
     width: 50%; /* Adjust width to make it look better */
 }
 
+.band-member.top-member h3{
+    font-size: 1.5em;
+}
+
+.band-member h3{
+    font-size: 1.5em;
+}
+
 .band-member img {
     width: 100%;
     border-radius: 10px;
