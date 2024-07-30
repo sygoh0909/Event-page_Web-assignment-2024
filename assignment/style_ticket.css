@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* White text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    text-align: center;
+}
+
+.ticket-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.ticket-info th, .ticket-info td {
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    padding: 8px;
+    text-align: left;
+}
+
+.ticket-info th {
+    background-color: #6a1b9a; /* Dark purple color for table header */
+    color: white;
+}
+
+.seating-info {
+    text-align: center;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.seating-chart {
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    padding: 10px;
+}
+
+.seating-description {
+    margin-left: 20px;
+}
+
+.seating-description p {
+    margin: 5px 0;
+}
+
+.seating-description .seat {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.seating-description .seat.vip {
+    background-color:  #ad1457; /* VIP seat color */
+}
+
+.seating-description .seat.general {
+    background-color:  #9575cd; /* General seat color */
+}
+
+.seating-description .seat.booked {
+    background-color: #ddd; /* Booked seat color */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.stage {
+    width: 220px; /* Slightly increased width for better visual balance */
+    height: 120px; /* Slightly increased height for better visual balance */
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa); /* Gradient background for a more dynamic look */
+    color: #fff; /* White text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px; /* Rounded corners for a softer appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for a lifted effect */
+    margin: 0 auto; /* Center the stage horizontally */
+    margin-bottom: 10px; /* Increased bottom margin for better spacing */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    font-size: 1.2em; /* Slightly larger text for better readability */
+}
+
+
+/* General seat styles */
+.seat {
+    position: relative;
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    background-color: #9575cd; /* Light purple for available seats */
+    border-radius: 50%; /* Make the seat circular */
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 10px; /* Smaller font size */
+    color: #fff; /* White text */
+}
+
+.seat::before, .seat::after {
+    content: '';
+    position: absolute;
+    background-color: inherit; /* Same color as the seat */
+    border-radius: 50%;
+}
+
+.seat::before {
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    left: 5px;
+}
+
+.seat::after {
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    right: 5px;
+}
+
+/* Seat states */
+.seat.booked {
+    background-color: #ddd; /* Grey color for booked seats */
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #4527a0; /* Darker purple color for selected seats */
+    color: #000; /* Black text for selected seats */
+}
+
+/* VIP seat styles */
+.seat.vip {
+    background-color: #ad1457; /* Dark pink color for VIP seats */
+}
+
+/* VIP seat booked state */
+.seat.vip.booked {
+    background-color: #ddd; /* Grey color for booked VIP seats */
+}
+
+/* Ticket selection form styling */
+.ticket-selection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ticket-selection form {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
+    border-top: 2px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
+    border-right: 2px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
+    display: inline-block;
+}
+
+.ticket-selection button {
+    background-color: #7b1fa2; /* Darker purple color for button to fit galaxy theme */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.ticket-selection button:hover {
+    background-color: #512da8; /* Darker purple on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .stage {
+        width: 180px; /* Adjust width for smaller screens */
+        height: 100px; /* Adjust height for smaller screens */
+    }
+
+    .ticket-info th, .ticket-info td {
+        padding: 6px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    .stage {
+        width: 160px; /* Further adjust width */
+        height: 90px; /* Further adjust height */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .seat {
+        width: 25px; /* Smaller seats */
+        height: 25px; /* Smaller seats */
+        font-size: 8px; /* Smaller font size */
+    }
+
+    .ticket-info table {
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    .ticket-selection form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    .stage {
+        width: 140px; /* Further adjust width */
+        height: 80px; /* Further adjust height */
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    .seat {
+        width: 25px; /* Smaller seats */
+        height: 25px; /* Smaller seats */
+        font-size: 8px; /* Smaller font size */
+    }
+
+    .ticket-info table {
+        font-size: 0.8em; /* Further adjust font size */
+    }
+
+    .ticket-selection form {
+        padding: 10px;
+    }
+
+    .ticket-selection button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 14px; /* Adjust button font size */
+    }
+}
