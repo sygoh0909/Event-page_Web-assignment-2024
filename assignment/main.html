@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="style_general.css">
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="home-page">
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Main Event Details <span class="dropdown-arrow"></span></a>
+                        <div class="dropdown-content">
+                            <a href="main-event-details.html">Event Information</a>
+                            <a href="sponsors.html">Sponsors</a>
+                            <a href="vendors.html">Vendors</a>
+                        </div>
+                    </li>
+                    <li><a href="merchandise.html">Merchandise</a></li>
+                    <li><a href="ticket-purchase.html">Ticket Purchase</a></li>
+                    <li><a href="mini-events.html">Mini Events</a></li>
+                    <li><a href="event-volunteer.html">Event Volunteer</a></li>
+                </ul>
+            </div>
+            <div class="login-signup">
+                <ul>
+                    <li id="loginLink"><a href="login.html">Login/Sign Up</a></li>
+                </ul>
+                <div id="userMenu" class="user-menu" style="display:none;">
+                    <span id="userIdDisplay"></span>
+                    <a id="logoutLink" href="#">Log Out</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <div class="banner-content">
+            <h1>Welcome to Our World!</h1>
+            <a href="main-event-details.html" class="check-out-button">Check Out More</a>
+        </div>
+    </div>
+    <main>
+        <section class="main-event">
+            <h2>Bobbin' with Blob the Flog: <br> A Musical Journey</h2>
+            <p>Date: August 26th</p>
+            <p>Time: 6:30 PM - 10:30 PM</p>
+            <p>Venue: Sunway Lagoon </p>
+            <p>Join our concert and experience an unforgettable night of music and fun!</p>
+            <a href="main-event-details.html" class="cta-button">Check Out More</a>
+        </section>
+        <section class="timeline">
+            <h2>Event Timeline</h2>
+            <div class="scroll-container">
+                <div class="event">
+                    <div class="event-wrapper">
+                        <div class="event-header">
+                            <h3>Mini Event 1</h3>
+                            <img src="busking-poster.png" alt="Mini Event 1" class="event-image">
+                        </div>
+                        <div class="event-details">
+                            <p>Aug 1, 5, 11, 2024, 12:00 PM</p>
+                            <a href="mini-events.html#mini-event-1">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="event-wrapper">
+                        <div class="event-header">
+                            <h3>Mini Event 2</h3>
+                            <img src="pop-up-store-poster.png" alt="Mini Event 2" class="event-image">
+                        </div>
+                        <div class="event-details">
+                            <p>Aug 8, 2024, 10:00 AM</p>
+                            <a href="mini-events.html#popup-store">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="event-wrapper">
+                        <div class="event-header">
+                            <h3>Main Event</h3>
+                            <img src="main-event-poster.png" alt="Main Event" class="event-image">
+                        </div>
+                        <div class="event-details">
+                            <p>August 26, 2024, 6:30 PM - 10:30 PM</p>
+                            <a href="main-event-details.html">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>                    
+        </section>
+        <section class="subpages-info">
+            <h2>Explore More</h2>
+            <div class="subpages-container">
+                <div class="subpage">
+                    <div class="subpage-image">
+                        <img src="frog1.webp" alt="Merchandise">
+                    </div>
+                    <div class="subpage-details">
+                        <h3>Merchandise</h3>
+                        <p>Check out our exclusive event merchandise. Find t-shirts, tote bags, and more!</p>
+                        <a href="merchandise.html" class="cta-button">Check Out More</a>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="subpage-image">
+                        <img src="frog4.webp" alt="Ticket Purchase">
+                    </div>
+                    <div class="subpage-details">
+                        <h3>Ticket Purchase</h3>
+                        <p>Buy your tickets now to secure your spot at the event!</p>
+                        <a href="ticket-purchase.html" class="cta-button">Check Out More</a>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="subpage-image">
+                        <img src="frog3.webp" alt="Event Volunteer">
+                    </div>
+                    <div class="subpage-details">
+                        <h3>Event Volunteer</h3>
+                        <p>Join us as a volunteer and help make the event a success.</p>
+                        <a href="event-volunteer.html" class="cta-button">Check Out More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <p>Follow us on social media to get updates! </p>
+            <div class="social-media">
+                <div class="social-media-item">
+                    <i class="fab fa-facebook-f"></i> <span>Facebook: @Blob_The_Flog</span>
+                </div>
+                <div class="social-media-item">
+                    <i class="fab fa-instagram"></i> <span>Instagram: @Blob_The_Flog</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><b>BlobTheFlog</b></p>
+            <p>&copy; 2024 UniStudents Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
