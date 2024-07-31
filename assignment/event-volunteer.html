@@ -98,17 +98,22 @@
                 <input type="number" id="age" name="age" min="16" required>
 
                 <label>Availability (Select all that apply):</label>
-                <div>
-                    <input type="checkbox" id="morning" name="availability" value="morning">
-                    <label for="morning">Morning</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="afternoon" name="availability" value="afternoon">
-                    <label for="afternoon">Afternoon</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="evening" name="availability" value="evening">
-                    <label for="evening">Evening</label>
+                <div class="availability-options">
+                    <div>
+                        <input type="checkbox" id="morning" name="availability" value="morning">
+                        <label for="morning" class="custom-checkbox"></label>
+                        <label for="morning">Morning</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="afternoon" name="availability" value="afternoon">
+                        <label for="afternoon" class="custom-checkbox"></label>
+                        <label for="afternoon">Afternoon</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="evening" name="availability" value="evening">
+                        <label for="evening" class="custom-checkbox"></label>
+                        <label for="evening">Evening</label>
+                    </div>
                 </div>
 
                 <label for="role">Preferred Role:</label>

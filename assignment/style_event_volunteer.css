@@ -85,6 +85,53 @@ button:hover {
     color: #e0e0e0;
 }
 
+.availability-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust gap to reduce distance between options */
+}
+.availability-options div {
+    display: flex;
+    align-items: center;
+}
+.availability-options label {
+    margin-left: 10px; /* Adjust the space between checkbox and label */
+}
+/* Custom checkbox styles */
+.availability-options input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.availability-options .custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+.availability-options input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+}
+.availability-options .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+}
+.availability-options input[type="checkbox"]:checked + .custom-checkbox::after {
+    display: block;
+}
+
 .testimonials {
     margin-top: 30px;
     background-color: rgba(0, 0, 0, 0.6);
