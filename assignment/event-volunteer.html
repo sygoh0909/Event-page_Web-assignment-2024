@@ -71,15 +71,15 @@
         <section class="volunteer-info">
             <p>We are looking for volunteers for the following roles:</p>
             <ul>
-                <li>Stage Setup: Assist in setting up the stage and arranging equipment.</li>
-                <li>Guest Registration: Help with checking in guests and managing registrations.</li>
-                <li>Merchandise Booth: Handle sales and inquiries at the merchandise booth.</li>
-                <li>Security: Ensure the safety of guests and manage crowd control.</li>
-                <li>Cleanup: Assist in cleaning up after the event and ensuring the venue is left tidy.</li>
-                <li>Sound Crew: Set up and operate sound equipment, ensure audio quality throughout the event, and troubleshoot any audio issues.</li>
-                <li>Ushering and Seating: Guide guests to their seats, assist with any seating-related inquiries, and ensure the seating area is orderly.</li>
-                <li>Lighting Crew: Set up and operate lighting equipment, ensure proper lighting throughout the event, and troubleshoot any lighting issues.</li>
-                <li>First Aid/Medical Assistance: Provide basic medical assistance and coordinate with professional medical staff in case of emergencies.</li>
+                <li><strong>Stage Setup&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&nbsp;</strong> Assist in setting up the stage and arranging equipment.</li>
+                <li><strong>Guest Registration&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;</strong> Help with checking in guests and managing registrations.</li>
+                <li><strong>Merchandise Booth&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&nbsp;</strong> Handle sales and inquiries at the merchandise booth.</li>
+                <li><strong>Security&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&ensp;&emsp;</strong> Ensure the safety of guests and manage crowd control.</li>
+                <li><strong>Cleanup&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;</strong> Assist in cleaning up after the event and ensuring the venue is left tidy.</li>
+                <li><strong>Sound Crew&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&nbsp;&nbsp;</strong> Set up and operate sound equipment, ensure audio quality throughout the event, and troubleshoot any audio issues.</li>
+                <li><strong>Ushering and Seating&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&ensp;&nbsp;&nbsp;</strong> Guide guests to their seats, assist with any seating-related inquiries, and ensure the seating area is orderly.</li>
+                <li><strong>Lighting Crew&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&emsp;&ensp;</strong> Set up and operate lighting equipment, ensure proper lighting throughout the event, and troubleshoot any lighting issues.</li>
+                <li><strong>First Aid/Medical Assistance&emsp;&ensp;&nbsp;</strong> Provide basic medical assistance and coordinate with professional medical staff in case of emergencies.</li>
             </ul>
             <button id="show-form">Sign Up</button>
         </section>
@@ -97,24 +97,12 @@
                 <label for="age">Your Age:</label>
                 <input type="number" id="age" name="age" min="16" required>
 
-                <label>Availability (Select all that apply):</label>
-                <div class="availability-options">
-                    <div>
-                        <input type="checkbox" id="morning" name="availability" value="morning">
-                        <label for="morning" class="custom-checkbox"></label>
-                        <label for="morning">Morning</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="afternoon" name="availability" value="afternoon">
-                        <label for="afternoon" class="custom-checkbox"></label>
-                        <label for="afternoon">Afternoon</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="evening" name="availability" value="evening">
-                        <label for="evening" class="custom-checkbox"></label>
-                        <label for="evening">Evening</label>
-                    </div>
-                </div>
+                <label for="availability">Availability (Select all that apply):</label>
+                <select id="availability" name="availability" multiple>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
 
                 <label for="role">Preferred Role:</label>
                 <select id="role" name="role" required>
