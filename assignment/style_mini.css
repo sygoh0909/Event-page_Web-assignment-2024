@@ -166,6 +166,14 @@ main {
     margin: 10px 0;
 }
 
+.frog-image {
+    width: 5x00px; 
+    height: auto; 
+    max-width: 100%;
+    margin-right: 20px; 
+    margin-left: 15px;
+}
+
 /* Additional styles for better visuals */
 button {
     background-color: #9c27b0;
