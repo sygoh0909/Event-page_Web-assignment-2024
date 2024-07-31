@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = form.querySelector('#email').value.trim();
         const phone = form.querySelector('#phone').value.trim();
         const age = form.querySelector('#age').value.trim();
-        const availability = Array.from(form.querySelector('#availability').selectedOptions).map(option => option.value);
+        const availability = Array.from(form.querySelectorAll('input[name="availability"]:checked')).map(checkbox => checkbox.value);
         const role = form.querySelector('#role').value.trim();
         const skills = form.querySelector('#skills').value.trim();
         const message = form.querySelector('#message').value.trim();
