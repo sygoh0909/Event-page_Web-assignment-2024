@@ -145,6 +145,7 @@ h2 {
     main {
         padding: 20px;
         margin: 20px;
+        backdrop-filter: blur(10px); /* Reduce blur effect for smaller screens */
     }
 
     h2 {
@@ -166,6 +167,7 @@ h2 {
     main {
         padding: 15px;
         margin: 15px;
+        backdrop-filter: none; /* Disable blur effect for mobile */
     }
 
     h2 {

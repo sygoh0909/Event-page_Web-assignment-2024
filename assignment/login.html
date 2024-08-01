@@ -184,7 +184,7 @@
             <form id="signUpForm" style="display: none;">
                 <h2>Sign Up</h2>
                 <label for="signUpUserId">User ID/Email/Phone Number:</label>
-                <input type="text" id="signUpUserId" name="userId" required minlength="5" placeholder="User ID (min. 5 characters)">
+                <input type="text" id="signUpUserId" name="userId" required minlength="5" pattern="\d*" placeholder="User ID (min. 5 digits)">                
                 <label for="signUpPassword">Password:</label>
                 <input type="password" id="signUpPassword" name="password" required>
                 <div class="error-message" id="signUpError">Please enter a valid User ID/Email/Phone Number and a password with more than 8 characters.</div>
