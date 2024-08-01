@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sponsors</title>
     <link rel="stylesheet" href="style_general.css">
-    <link rel="stylesheet" href="style_sponsors.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body{
@@ -147,8 +146,12 @@
                 <li><a href="ticket-purchase.html">Ticket Purchase</a></li>
                 <li><a href="mini-events.html">Mini Events</a></li>
                 <li><a href="event-volunteer.html">Event Volunteer</a></li>
-                <li><a href="login.html">Login/Sign Up</a></li> <!-- Added to mobile view -->
+                <li id="mobileLoginLink"><a href="login.html">Login/Sign Up</a></li> 
             </ul>
+            <div id="mobileUserMenu" class="mobile-user-menu" style="display:none;">
+                <span id="mobileUserIdDisplay"></span>
+                <a id="mobileLogoutLink" href="#">Log Out</a>
+            </div>
         </div>
     </header>
     <div class="banner">
