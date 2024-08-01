@@ -75,15 +75,15 @@
         <section class="volunteer-info">
             <p>We are looking for volunteers for the following roles:</p>
             <ul>
-                <li><strong>Stage Setup&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&nbsp;</strong> Assist in setting up the stage and arranging equipment.</li>
-                <li><strong>Guest Registration&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;</strong> Help with checking in guests and managing registrations.</li>
-                <li><strong>Merchandise Booth&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&nbsp;</strong> Handle sales and inquiries at the merchandise booth.</li>
-                <li><strong>Security&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&ensp;&emsp;</strong> Ensure the safety of guests and manage crowd control.</li>
-                <li><strong>Cleanup&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;</strong> Assist in cleaning up after the event and ensuring the venue is left tidy.</li>
-                <li><strong>Sound Crew&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&nbsp;&nbsp;</strong> Set up and operate sound equipment, ensure audio quality throughout the event, and troubleshoot any audio issues.</li>
-                <li><strong>Ushering and Seating&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&ensp;&nbsp;&nbsp;</strong> Guide guests to their seats, assist with any seating-related inquiries, and ensure the seating area is orderly.</li>
-                <li><strong>Lighting Crew&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&emsp;&ensp;</strong> Set up and operate lighting equipment, ensure proper lighting throughout the event, and troubleshoot any lighting issues.</li>
-                <li><strong>First Aid/Medical Assistance&emsp;&ensp;&nbsp;</strong> Provide basic medical assistance and coordinate with professional medical staff in case of emergencies.</li>
+                <li><strong>Stage Setup:</strong><br>Assist in setting up the stage and arranging equipment.</li>
+                <li><strong>Guest Registration:</strong><br>Help with checking in guests and managing registrations.</li>
+                <li><strong>Merchandise Booth:</strong><br>Handle sales and inquiries at the merchandise booth.</li>
+                <li><strong>Security:</strong><br>Ensure the safety of guests and manage crowd control.</li>
+                <li><strong>Cleanup:</strong><br>Assist in cleaning up after the event and ensuring the venue is left tidy.</li>
+                <li><strong>Sound Crew:</strong><br>Set up and operate sound equipment, ensure audio quality throughout the event, and troubleshoot any audio issues.</li>
+                <li><strong>Ushering and Seating:</strong><br>Guide guests to their seats, assist with any seating-related inquiries, and ensure the seating area is orderly.</li>
+                <li><strong>Lighting Crew:</strong><br>Set up and operate lighting equipment, ensure proper lighting throughout the event, and troubleshoot any lighting issues.</li>
+                <li><strong>First Aid/Medical Assistance:</strong><br>Provide basic medical assistance and coordinate with professional medical staff in case of emergencies.</li>
             </ul>
             <button id="show-form">Sign Up</button>
         </section>
@@ -92,14 +92,16 @@
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">Your Email:</label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                <span id="email-error" class="error-message"></span>
 
-                <label for="phone">Your Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                <span id="phone-error" class="error-message"></span>
 
                 <label for="age">Your Age:</label>
-                <input type="number" id="age" name="age" min="16" required>
+                <input type="number" id="age" name="age" min="18" required>
 
                 <label>Availability (Select all that apply):</label>
                 <div class="availability-options">
@@ -119,6 +121,7 @@
                         <label for="evening">Evening</label>
                     </div>
                 </div>
+                <span id="availability-error" class="error-message"></span>
 
                 <label for="role">Preferred Role:</label>
                 <select id="role" name="role" required>

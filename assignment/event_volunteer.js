@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const skills = form.querySelector('#skills').value.trim();
         const message = form.querySelector('#message').value.trim();
 
+        // Reset error messages
+        form.querySelector('#email-error').textContent = '';
+        form.querySelector('#phone-error').textContent = '';
+        form.querySelector('#availability-error').textContent = '';
+
         // Validate form data
         if (!name || !email || !age || !role) {
             alert('Please fill in your name, email, age, and preferred role.');
@@ -31,22 +36,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Validate email format
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        const emailError = form.querySelector('#email-error');
         if (!emailPattern.test(email)) {
-            alert('Please enter a valid email address.');
+            emailError.textContent = 'Please enter a valid email address.';
             return;
         }
 
         // Validate phone number format (example: 10-digit US phone number)
         const phonePattern = /^\d{10}$/;
+        const phoneError = form.querySelector('#phone-error');
         if (!phonePattern.test(phone)) {
-            alert('Please enter a valid 10-digit phone number.');
+            phoneError.textContent = 'Please enter a valid 10-digit phone number.';
             return;
         }
 
-        // Validate age to be 18 and above
-        const ageNumber = parseInt(age, 10);
-        if (isNaN(ageNumber) || ageNumber < 18) {
-            alert('You must be 18 years old or older to sign up as a volunteer.');
+        // Validate availability
+        const availabilityError = form.querySelector('#availability-error');
+        if (availability.length === 0) {
+            availabilityError.textContent = 'Please select at least one availability option.';
             return;
         }
 

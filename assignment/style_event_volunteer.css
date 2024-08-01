@@ -196,6 +196,11 @@ button:hover {
     margin: 0;
 }
 
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
 /* Media query for phones up to 410px */
 @media (max-width: 410px) {
     body {
