@@ -34,6 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function checkout() {
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            alert('Please log in to proceed with checkout.');
+            window.location.href = 'login.html';
+            return;
+        }
+
         const paymentMethod = document.getElementById('payment-method').value;
         alert(`Proceeding to checkout with ${paymentMethod}.`);
         // Implement payment processing logic here

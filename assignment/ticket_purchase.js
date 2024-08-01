@@ -44,6 +44,15 @@ function calculateTotal() {
 
 document.getElementById('ticket-form').addEventListener('submit', (e) => {
     e.preventDefault();
+
+    // Check if the user is logged in
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (!loggedInUser) {
+        alert('Please log in to purchase tickets.');
+        window.location.href = 'login.html';
+        return;
+    }
+
     if (selectedSeats.length === 0) {
         alert('Please select at least one seat.');
         return;
